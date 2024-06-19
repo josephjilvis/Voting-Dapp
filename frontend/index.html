@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voting dApp</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div id="connectMetamask">
+<p id="connectwalletMessage">Please connect your Metamask Wallet to Vote</p>
+<button id="connectwallet">Connect Wallet</button>
+</div>
+<div id="votingStation">
+<div id="timer">
+<span id="timerMessage"><span id="time">123</span> seconds left</span>
+</div>
+<div id="mainBoard">
+<table id="candidateBoard">
+<tr>
+<th>ID No.</th>
+<th>Candidate</th>
+</tr>
+<tr>
+<td>0</td>
+<td>Candidate 0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Candidate 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Candidate 2</td>
+</tr>
+</table>
+</div>
+
+<div id="voteForm">
+    <p>Please select the ID of the candidate you would like to vote:</p>
+    <label>
+      <input type="number" id="vote" />
+      <button id="sendVote">Send Vote</button>
+    </label>
+  </div>
+  <div id="showResultContainer">
+    <button id="showResult">Show Result</button>
+  </div>
+  <div id="result">
+    <table id="resultBoard">
+      <tr>
+        <th>ID No.</th>
+        <th>Candidate</th>
+        <th>Number of Votes</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>Candidate 0</td>
+        <td><span id="vote_count_0"></span></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Candidate 1</td>
+        <td><span id="vote_count_1"></span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Candidate 2</td>
+        <td><span id="vote_count_2"></span></td>
+      </tr>
+    </table>
+  </div>
+  <div id="admin">
+    <p id="adminHeading">Comelec Only</p>
+    <div id="tools">
+        <div id="startElection">
+            <p id="startelectionMessage">Start Election</p>
+            <input type="text" id="candidates" placeholder="names separated by comma">
+            <input type="number" id="electionDuration" placeholder="duration in min">
+            <button id="startAnElection">Start Election</button>
+        </div>
+        <div id="addCandidate">
+            <p id="addCandidateMessage">Add a Candidate</p>
+            <input type="text" id="candidate" placeholder="candidate name" />
+            <button id="addTheCandidate">Add Candidate</button>
+            </div>    
+    </div>
+</div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
